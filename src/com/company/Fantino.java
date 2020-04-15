@@ -10,5 +10,6 @@ public abstract class Fantino {
         this.cognome = cognome;
     }
 
+
     public abstract void Cavalca(Cavallo c);
 }

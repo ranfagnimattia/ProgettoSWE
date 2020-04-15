@@ -7,11 +7,12 @@ public class ConcorrenteVelocità extends Concorrente {
 
     @Override
     public void Corri() {
+        Scatta();
         fineCorsa=true;
         Notify();
     }
 
-    private void Trotta() {
+    private void Scatta() {
 
     }
 }

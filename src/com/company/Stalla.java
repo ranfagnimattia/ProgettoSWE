@@ -11,8 +11,8 @@ public class Stalla {
         this.cavalli = new ArrayList<Cavallo>(size);
     }
 
-    public ArrayList<Cavallo> getCavalli() {
-        return cavalli;
+    public Cavallo getCavallo(int i) {
+        return cavalli.get(i);
     }
 
     public Integer getSize() {

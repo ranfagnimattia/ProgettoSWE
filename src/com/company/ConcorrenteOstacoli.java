@@ -16,6 +16,8 @@ public class ConcorrenteOstacoli extends Concorrente {
 
     @Override
     public void Corri() {
+        Trotta();
+        Salta();
         fineCorsa=true;
         Notify();
 
