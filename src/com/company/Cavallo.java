@@ -54,4 +54,5 @@ public abstract class Cavallo {
     public boolean equals(Object o) {
         return Objects.equals(((Cavallo) o).id, this.id);
     }
+
 }
