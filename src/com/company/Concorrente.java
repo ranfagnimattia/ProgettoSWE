@@ -1,13 +1,14 @@
 package com.company;
 
 public abstract class Concorrente extends Subject{
+    protected Integer id;
     protected Cavallo cavallo;
     protected Fantino fantino;
     protected Boolean fineCorsa;
 
 
-    public Concorrente(Cavallo cavallo, Fantino fantino,PreparazioneGara observer) {
-        super.addObserver(observer);
+    public Concorrente(Integer id,Cavallo cavallo, Fantino fantino) {
+        this.id=id;
         this.cavallo = cavallo;
         this.fantino = fantino;
         this.fineCorsa=false;
@@ -26,4 +27,6 @@ public abstract class Concorrente extends Subject{
     public Boolean isCompleted() {
         return fineCorsa;
     }
+
+    public Integer getId() {return id; }
 }

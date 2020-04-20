@@ -10,8 +10,8 @@ public abstract class Subject {
     public void removeObserver(Observer o) {
         observers.remove(o);
     }
-    public void Notify() {
+    public void Notify(Object obj) {
         for(Observer o:observers)
-            o.Update();
+            o.Update(obj);
     }
 }

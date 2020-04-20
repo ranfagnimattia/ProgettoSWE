@@ -1,5 +1,6 @@
 package com.company;
 
 public abstract class Observer {
-    public abstract void Update();
+
+    public abstract void Update(Object obj);
 }

@@ -1,22 +1,30 @@
 package com.company;
 
-import java.util.Vector;
+public class Classifica extends Subject{
+    private Integer[] posizioni;
+    private Integer posizioneattuale;
 
-//SERVE PROXY PER ACCEDERE A CLASSIFICA!
-public class Classifica {
-    private Vector<Concorrente> posizioni;
-
-    public Classifica() {
-        posizioni = new Vector<Concorrente>();
+    public Classifica(Integer[] posizioni, Almanacco al) {
+        this.addObserver(al);
+        this.posizioni = new Integer[posizioni.length];
+        System.arraycopy(posizioni,0,this.posizioni,0,posizioni.length-1);
+        posizioneattuale=0;
     }
 
-    public Vector<Concorrente> getPosizioni() {
+    public Integer[] getPosizioni() {
         return posizioni;
     }
 
-    public void aggiornaClassifica(Concorrente c) {
-        if(!posizioni.contains(c))
-            posizioni.add(c);
+    public Integer getPosizioneattuale() {
+        return posizioneattuale;
     }
 
+    public void confermaArrivo(Integer giocatore) {
+        if(giocatore>=0 && giocatore<posizioni.length) {
+            posizioneattuale++;
+            posizioni[giocatore]=posizioneattuale;
+            if(posizioneattuale == posizioni.length)
+                Notify(this);
+        }
+    }
 }

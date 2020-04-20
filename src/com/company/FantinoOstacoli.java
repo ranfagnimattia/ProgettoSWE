@@ -6,11 +6,6 @@ public class FantinoOstacoli extends Fantino{
         super(id, nome, cognome);
     }
 
-    @Override
-    public void Cavalca(Cavallo c) {
-        Salta(c);
-    }
-
     //Implement
     private Integer Salta(Cavallo c) {
         return c.getElevation();

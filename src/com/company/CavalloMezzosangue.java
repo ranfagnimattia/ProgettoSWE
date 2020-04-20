@@ -4,8 +4,8 @@ public class CavalloMezzosangue extends Cavallo{
     private Cavallo padre;
     private Cavallo madre;
 
-    public CavalloMezzosangue(Integer id, Integer resistance, Integer weight, Float speed, Integer elevation, Cavallo padre, Cavallo madre) {
-        super(id, resistance, weight, speed, elevation);
+    public CavalloMezzosangue(Integer resistance, Integer weight, Float speed, Integer elevation, Cavallo padre, Cavallo madre) {
+        super(resistance, weight, speed, elevation);
         this.padre = padre;
         this.madre = madre;
     }

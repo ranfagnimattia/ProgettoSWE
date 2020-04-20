@@ -6,11 +6,6 @@ public class FantinoVelocità extends Fantino{
         super(id, nome, cognome);
     }
 
-    @Override
-    public void Cavalca(Cavallo c) {
-        Scatta(c);
-    }
-
     //Implement
     private void Scatta(Cavallo c) {
 

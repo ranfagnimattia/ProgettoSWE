@@ -1,30 +1,12 @@
 package com.company;
 
-
-import java.util.ArrayList;
-
-public abstract class PreparazioneGara extends Observer{
-    protected Schedario sc;
+public abstract class PreparazioneGara {
+    public abstract Gara createGara(int nconcorrenti,Almanacco al);
     protected Stalla st;
-    private Classifica clas;
-    protected ArrayList<Concorrente> concorrenti;
-    public abstract void PreparaConcorrenti(int ngiocatori);
-    public abstract void AvviaGara();
+    protected Schedario sc;
 
-    public PreparazioneGara(Schedario sc, Stalla st) {
-        this.sc = sc;
+    public PreparazioneGara(Stalla st, Schedario sc) {
         this.st = st;
-        this.clas = new Classifica();
-    }
-
-
-    @Override
-    public void Update() {
-        for(Concorrente c:concorrenti) {
-            if(c.isCompleted()){
-                clas.aggiornaClassifica(c);
-                concorrenti.remove(c);
-            }
-        }
+        this.sc = sc;
     }
 }

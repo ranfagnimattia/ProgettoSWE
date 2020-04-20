@@ -6,8 +6,7 @@ public abstract class Cavallo {
     private Integer resistance,weight,elevation, id;
     private Float speed;
 
-    public Cavallo(Integer id,Integer resistance, Integer weight, Float speed,Integer elevation) {
-        this.id=id;
+    public Cavallo(Integer resistance, Integer weight, Float speed,Integer elevation) {
         this.resistance = resistance;
         this.weight = weight;
         this.speed = speed;

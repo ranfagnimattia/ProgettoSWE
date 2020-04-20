@@ -1,26 +1,15 @@
 package com.company;
 
-public class GaraOstacoli extends PreparazioneGara {
-    public GaraOstacoli(Schedario sc, Stalla st) {
-        super(sc, st);
-    }
+import java.util.ArrayList;
 
+public class GaraOstacoli extends Gara {
     @Override
-    public void PreparaConcorrenti(int ngiocatori) {
-        for(int i=0;i<ngiocatori;i++) {
-            if(st.getCavallo(i) != null && sc.getFantinoOStacoli(i) != null) {
-                ConcorrenteOstacoli c = new ConcorrenteOstacoli(st.getCavallo(i),sc.getFantinoOStacoli(i),this);
-                concorrenti.add(c);
-            }
-            else
-                break;
+    public void avviaGara() {
+        System.out.println("Inizio gara di ostacoli!");
+        for(Concorrente c: concorrenti) {
+            c.Corri();
+            if(c.isCompleted())
+                classifica.confermaArrivo(c.getId());
         }
     }
-
-    @Override
-    public void AvviaGara() {
-        for(Concorrente c:concorrenti)
-            c.Corri();
-    }
-
 }

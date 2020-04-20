@@ -1,15 +1,14 @@
 package com.company;
 
 public class ConcorrenteVelocità extends Concorrente {
-    public ConcorrenteVelocità(Cavallo cavallo, Fantino fantino,PreparazioneGara pr) {
-        super(cavallo, fantino,pr);
+    public ConcorrenteVelocità(Integer id,Cavallo cavallo, Fantino fantino) {
+        super(id,cavallo, fantino);
     }
 
     @Override
     public void Corri() {
         Scatta();
         fineCorsa=true;
-        Notify();
     }
 
     private void Scatta() {

@@ -1,8 +1,8 @@
 package com.company;
 
 public class ConcorrenteOstacoli extends Concorrente {
-    public ConcorrenteOstacoli(Cavallo cavallo, Fantino fantino, PreparazioneGara pr) {
-        super(cavallo, fantino, pr);
+    public ConcorrenteOstacoli(Integer id,Cavallo cavallo, Fantino fantino) {
+        super(id,cavallo, fantino);
     }
 
     private void Salta() {
@@ -19,7 +19,5 @@ public class ConcorrenteOstacoli extends Concorrente {
         Trotta();
         Salta();
         fineCorsa=true;
-        Notify();
-
     }
 }
